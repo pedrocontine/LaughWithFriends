@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iCo-CA-V3j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bD4-mh-mEB">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -51,7 +51,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZ3-Ms-eej" customClass="GameStartMenu" customModule="TikTokLaugh" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l41-oP-jPQ">
                                 <rect key="frame" x="64" y="20" width="120" height="353"/>
@@ -148,10 +148,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="845-0C-pa9">
-                                <rect key="frame" x="732" y="100" width="100" height="214"/>
+                                <rect key="frame" x="732" y="42.5" width="100" height="329"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sx-IP-BT1">
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qf-fN-gXL">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6qf-fN-gXL" secondAttribute="height" multiplier="1:1" constant="1" id="5kF-gJ-Sjf"/>
+                                            <constraint firstAttribute="width" constant="100" id="uo7-H9-P9G"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.86274509799999999" green="0.5450980392" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="instagram"/>
+                                        <state key="selected" image="instagram"/>
+                                        <state key="highlighted" image="instagram"/>
+                                        <connections>
+                                            <action selector="shareInstagramStories" destination="bD4-mh-mEB" eventType="touchUpInside" id="ae1-5K-7cN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sx-IP-BT1">
+                                        <rect key="frame" x="0.0" y="115" width="100" height="99"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="KTr-0e-drb"/>
@@ -168,7 +183,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxZ-W5-wgk">
-                                        <rect key="frame" x="0.0" y="115" width="100" height="99"/>
+                                        <rect key="frame" x="0.0" y="230" width="100" height="99"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.86274509799999999" green="0.5450980392" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" image="arrow.clockwise" catalog="system">
@@ -181,6 +196,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="6qf-fN-gXL" firstAttribute="width" secondItem="6qf-fN-gXL" secondAttribute="height" multiplier="1:1" constant="1" id="ITp-KS-8z5"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -196,6 +214,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tMX-HN-dsT"/>
                     <connections>
+                        <outlet property="instagramButton" destination="6qf-fN-gXL" id="lGk-yU-uwe"/>
                         <outlet property="playAgainButton" destination="yxZ-W5-wgk" id="e0P-du-u1b"/>
                         <outlet property="screenshotView" destination="Hij-ee-5RM" id="Wgm-Yp-UeO"/>
                         <outlet property="shareButton" destination="8Sx-IP-BT1" id="DFf-Ib-8Jf"/>
@@ -225,6 +244,7 @@
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="instagram" width="100" height="100"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>

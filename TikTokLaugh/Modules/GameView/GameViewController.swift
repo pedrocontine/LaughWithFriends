@@ -44,18 +44,30 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
         gameStartMenu.sceneView.scene = arSceneView.scene
     }
     
+    func checkCameraPermission() {
+        switch (AVCaptureDevice.authorizationStatus(for: .video)){
+        case .authorized:
+            print("Authorize.")
+        case .notDetermined, .restricted, .denied:
+            let alert = CameraPermission().alertForPermission()
+            self.present(alert, animated: true, completion: nil)
+        @unknown default:
+            print("Unknown status.")
+        }
+    }
+    
     func initVideoPlayer() {
         videoPlayer.delegate = self
         
         if Reachability.isConnectedToNetwork(){
             refreshButton.isHidden = true
             loadVideo()
-        } else{
+        }
+        else {
             activityIndicator.stopAnimating()
             internetMessage.isHidden = false
             refreshButton.isHidden = false
         }
-        
     }
     
     func initARScene() {
@@ -87,6 +99,9 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
             activityIndicator.startAnimating()
             
             gameStartMenu.isHidden = true
+            
+            //Take first screenshot
+            takeScreenshot()
             
             initVideoPlayer()
             videoPlayer.playVideo()

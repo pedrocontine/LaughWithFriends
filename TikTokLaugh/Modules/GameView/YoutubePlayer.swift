@@ -27,7 +27,7 @@ extension GameViewController: WKYTPlayerViewDelegate {
     }
     
     func createRandomPlaylist(records: [CKRecord], count: Int) -> [String]? {
-        guard var fullPlaylist = records.first?.object(forKey: "videosID") as? [String] else {return nil}
+        guard var fullPlaylist = records.first?.object(forKey: "videosID") as? [String], count > 0 else {return nil}
         
         var randomPlaylist: [String] = []
         

@@ -62,4 +62,22 @@ extension GameViewController: ARSCNViewDelegate {
         gameController.handleSmile(faceAnchor: faceAnchor)
     }
     
+//    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+//        let image = insertImage(image: UIImage(named: "lion")!)
+//        node.addChildNode(image)
+//    }
+    
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        self.checkCameraPermission()
+    }
+    
+    func insertImage(image: UIImage, width: CGFloat = 0.2, height: CGFloat = 0.2) -> SCNNode {
+        let plane = SCNPlane(width: width, height: height)
+        plane.firstMaterial!.diffuse.contents = image
+        let node = SCNNode(geometry: plane)
+        node.constraints = [SCNBillboardConstraint()]
+        return node
+    }
+
+    
 }
