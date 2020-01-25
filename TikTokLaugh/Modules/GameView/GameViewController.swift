@@ -12,6 +12,9 @@ import YoutubePlayer_in_WKWebView
 
 class GameViewController: UIViewController, GameControllerDelegate, GameStartMenuDelegate {
 
+    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var internetMessage: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var gameStartMenu: GameStartMenu!
     @IBOutlet weak var videoPlayer: WKYTPlayerView!
@@ -20,6 +23,8 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     var boundsSize : CGSize!
     
     var gameController: GameController!
+    var playlist: [String] = []
+    var screenshot: UIImage?
 
     func initView() {
         gameController = GameController()
@@ -28,7 +33,6 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
         gameStartMenu.isHidden = false
         
         initARScene()
-        initVideoPlayer()
         initGameStartMenu()
         
         tableView.reloadData()
@@ -42,7 +46,16 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     
     func initVideoPlayer() {
         videoPlayer.delegate = self
-        loadVideo()
+        
+        if Reachability.isConnectedToNetwork(){
+            refreshButton.isHidden = true
+            loadVideo()
+        } else{
+            activityIndicator.stopAnimating()
+            internetMessage.isHidden = false
+            refreshButton.isHidden = false
+        }
+        
     }
     
     func initARScene() {
@@ -56,10 +69,34 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
         verifyFaceTrackingAvailability()
     }
     
+    @IBAction func refreshButtonPressed() {
+        initVideoPlayer()
+    }
+    
+    func takeScreenshot() {
+        DispatchQueue.main.async {
+            self.arSceneView.isHidden = false
+            self.screenshot = self.arSceneView.takeScreenshot()
+            self.arSceneView.isHidden = true
+        }
+    }
+    
     func startButtonPressed() {
         if gameController.canStart() {
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+            
             gameStartMenu.isHidden = true
+            
+            initVideoPlayer()
             videoPlayer.playVideo()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showEndGame" {
+            let vc = segue.destination as! EndGameViewController
+            vc.screenshot = self.screenshot
         }
     }
     
@@ -99,11 +136,11 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     func getPlayerFaceColor(index: Int) -> UIColor {
         switch index {
         case 0:
-            return UIColor.PlayerFace.red
+            return UIColor.Custom.red
         case 1:
-            return UIColor.PlayerFace.blue
+            return UIColor.Custom.blue
         case 2:
-            return UIColor.PlayerFace.green
+            return UIColor.Custom.green
         default:
             return .yellow
         }
@@ -123,6 +160,8 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
         configuration.maximumNumberOfTrackedFaces = gameController.maxPlayers
 
         arSceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        
+        
     }
         
     override func viewWillDisappear(_ animated: Bool) {

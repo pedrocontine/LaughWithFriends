@@ -10,7 +10,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameStartMenu" customModule="TikTokLaugh" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="gyG-IX-tBo"/>
-                <outlet property="gameModeSegmented" destination="dvd-sj-Qsq" id="6bv-ar-d1N"/>
                 <outlet property="sceneView" destination="Bnp-w7-Nwf" id="GpK-Ho-dVd"/>
                 <outlet property="startButton" destination="K5e-O1-9Yq" id="vdW-e2-oJq"/>
             </connections>
@@ -26,22 +25,18 @@
                         <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bnp-w7-Nwf">
                             <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         </sceneKitView>
-                        <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dvd-sj-Qsq">
-                            <rect key="frame" x="514.5" y="323.5" width="269" height="71.5"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <segments>
-                                <segment title="Laugh counter"/>
-                                <segment title="You laugh you lose"/>
-                            </segments>
-                        </segmentedControl>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5e-O1-9Yq">
-                            <rect key="frame" x="803.5" y="323.5" width="72.5" height="70.5"/>
+                            <rect key="frame" x="776" y="162" width="100" height="100"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="FFE-KX-kht"/>
+                                <constraint firstAttribute="width" secondItem="K5e-O1-9Yq" secondAttribute="height" multiplier="1:1" id="yvl-dl-eUC"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <color key="tintColor" red="0.86274509799999999" green="0.5450980392" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" image="play.circle.fill" catalog="system">
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                            <state key="normal" image="play" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="50"/>
                                 </preferredSymbolConfiguration>
                             </state>
                             <state key="selected" image="play.circle.fill" catalog="system"/>
@@ -53,12 +48,7 @@
                     <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="Bnp-w7-Nwf" firstAttribute="top" secondItem="fSJ-vs-j7O" secondAttribute="top" id="EjA-S2-eYP"/>
-                        <constraint firstAttribute="bottom" secondItem="K5e-O1-9Yq" secondAttribute="bottom" constant="20" id="NqI-Ud-4Uo"/>
                         <constraint firstItem="Bnp-w7-Nwf" firstAttribute="leading" secondItem="fSJ-vs-j7O" secondAttribute="leading" id="TwY-nW-dOA"/>
-                        <constraint firstAttribute="trailing" secondItem="K5e-O1-9Yq" secondAttribute="trailing" constant="20" id="VFc-49-7Oq"/>
-                        <constraint firstAttribute="bottom" secondItem="dvd-sj-Qsq" secondAttribute="bottom" constant="20" id="bH5-Wk-FS5"/>
-                        <constraint firstItem="K5e-O1-9Yq" firstAttribute="leading" secondItem="dvd-sj-Qsq" secondAttribute="trailing" constant="20" id="icB-s5-POh"/>
-                        <constraint firstItem="dvd-sj-Qsq" firstAttribute="top" secondItem="K5e-O1-9Yq" secondAttribute="top" id="rIh-Kt-yId"/>
                         <constraint firstAttribute="trailing" secondItem="Bnp-w7-Nwf" secondAttribute="trailing" id="tvo-2N-ymE"/>
                         <constraint firstAttribute="bottom" secondItem="Bnp-w7-Nwf" secondAttribute="bottom" id="yyL-5Z-SXo"/>
                     </constraints>
@@ -66,6 +56,8 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K5e-O1-9Yq" secondAttribute="trailing" constant="20" id="5ej-iZ-BSX"/>
+                <constraint firstItem="K5e-O1-9Yq" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="5nz-QB-dmf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fSJ-vs-j7O" secondAttribute="trailing" id="d0z-Id-aa3"/>
                 <constraint firstAttribute="bottom" secondItem="fSJ-vs-j7O" secondAttribute="bottom" id="ig5-4B-071"/>
                 <constraint firstItem="fSJ-vs-j7O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rie-t7-0Tp"/>
@@ -77,6 +69,7 @@
         </view>
     </objects>
     <resources>
+        <image name="play" catalog="system" width="58" height="64"/>
         <image name="play.circle.fill" catalog="system" width="64" height="62"/>
     </resources>
 </document>

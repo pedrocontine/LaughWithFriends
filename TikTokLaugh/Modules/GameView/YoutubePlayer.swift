@@ -15,15 +15,29 @@ extension GameViewController: WKYTPlayerViewDelegate {
     func loadVideo() {
         self.getPlaylists { (records) in
             guard let records = records,
-                  let playlist = records[0].object(forKey: "videosID") as? [String]
-            else {return}
-            
-            let randomVideo = playlist.randomElement()!
+                  let playlist = self.createRandomPlaylist(records: records, count: 1) else {return}
             
             DispatchQueue.main.async {
-                self.videoPlayer.load(withVideoId: randomVideo, playerVars: self.videoConfigs())
+                self.activityIndicator.stopAnimating()
+                
+                self.playlist = playlist
+                self.videoPlayer.load(withVideoId: playlist.first!, playerVars: self.videoConfigs())
             }
         }
+    }
+    
+    func createRandomPlaylist(records: [CKRecord], count: Int) -> [String]? {
+        guard var fullPlaylist = records.first?.object(forKey: "videosID") as? [String] else {return nil}
+        
+        var randomPlaylist: [String] = []
+        
+        for _ in 0...(count - 1) {
+            let index = Int.random(in: 0...fullPlaylist.count-1)
+            randomPlaylist.append(fullPlaylist[index])
+            fullPlaylist.remove(at: index)
+        }
+        
+        return randomPlaylist
     }
     
     func videoConfigs() -> [String : Any] {
@@ -65,6 +79,10 @@ extension GameViewController: WKYTPlayerViewDelegate {
         default:
             gameController.isPlaying = true
         }
+    }
+    
+    func playerViewDidBecomeReady(_ playerView: WKYTPlayerView) {
+        playerView.cuePlaylist(byVideos: self.playlist, index: 0, startSeconds: 0, suggestedQuality: .auto)
     }
     
 }

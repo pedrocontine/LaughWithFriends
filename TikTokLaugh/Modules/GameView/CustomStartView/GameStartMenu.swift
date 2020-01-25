@@ -14,28 +14,11 @@ class GameStartMenu: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var sceneView: SCNView!
     @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var gameModeSegmented: UISegmentedControl!
     
     weak var delegate: GameStartMenuDelegate?
-    
-    var gameModeSelected: GameMode {
-        get {
-           return self.getGameModeSelected()
-        }
-    }
-    
-    fileprivate func getGameModeSelected() -> GameMode {
-        switch gameModeSegmented.selectedSegmentIndex {
-        case 0:
-            return .laughCounter
-        case 1:
-            return .youLaughYouLose
-        default:
-            return .laughCounter
-        }
-    }
 
     @IBAction func startButtonPressed() {
+        Haptic().heavy()
         delegate?.startButtonPressed()
     }
     
@@ -51,7 +34,7 @@ class GameStartMenu: UIView {
     
     private func commonInit() {
         Bundle.main.loadNibNamed("GameStartMenu", owner: self, options: nil)
-        self.startButton.layer.cornerRadius = 60
+        self.startButton.layer.cornerRadius = 30
         self.addSubview(contentView)
     }
         

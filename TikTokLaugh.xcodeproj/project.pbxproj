@@ -24,6 +24,9 @@
 		2050B90E23DA4F2600313D9F /* ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2050B90D23DA4F2600313D9F /* ship.scn */; };
 		2050B91523DA7A8400313D9F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050B91423DA7A8400313D9F /* Colors.swift */; };
 		208D920823DBC43300E3733A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208D920723DBC43300E3733A /* CloudKit.framework */; };
+		208D920A23DBD25000E3733A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D920923DBD25000E3733A /* Reachability.swift */; };
+		208D920E23DC029200E3733A /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D920D23DC029200E3733A /* Screenshot.swift */; };
+		208D921023DC097300E3733A /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D920F23DC097300E3733A /* Haptic.swift */; };
 		20EC1B3F23D904E900402785 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B3E23D904E900402785 /* GameController.swift */; };
 		20EC1B4123D9056800402785 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4023D9056800402785 /* Player.swift */; };
 		20EC1B4323D9057900402785 /* PlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4223D9057900402785 /* PlayerStatus.swift */; };
@@ -58,6 +61,9 @@
 		2050B90D23DA4F2600313D9F /* ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ship.scn; sourceTree = "<group>"; };
 		2050B91423DA7A8400313D9F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		208D920723DBC43300E3733A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		208D920923DBD25000E3733A /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		208D920D23DC029200E3733A /* Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
+		208D920F23DC097300E3733A /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		20EC1B3E23D904E900402785 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		20EC1B4023D9056800402785 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		20EC1B4223D9057900402785 /* PlayerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatus.swift; sourceTree = "<group>"; };
@@ -187,6 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				2050B91423DA7A8400313D9F /* Colors.swift */,
+				208D920923DBD25000E3733A /* Reachability.swift */,
+				208D920D23DC029200E3733A /* Screenshot.swift */,
+				208D920F23DC097300E3733A /* Haptic.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -344,6 +353,8 @@
 				20EC1B5023D9FB5700402785 /* GameStartMenu.swift in Sources */,
 				20FCA31023DA20FC00302D2A /* VideoPlayerState.swift in Sources */,
 				20EC1B4523D913BF00402785 /* GameViewController.swift in Sources */,
+				208D921023DC097300E3733A /* Haptic.swift in Sources */,
+				208D920E23DC029200E3733A /* Screenshot.swift in Sources */,
 				2050B90A23DA47B700313D9F /* ARFrame+TransformedDepthImage.swift in Sources */,
 				202BCD9023D63AD2008BB6A7 /* AppDelegate.swift in Sources */,
 				2038828B23D75F2700C25FFD /* YoutubePlayer.swift in Sources */,
@@ -358,6 +369,7 @@
 				20EC1B4323D9057900402785 /* PlayerStatus.swift in Sources */,
 				202415EA23DA3D5100BD13C2 /* EndGameViewController.swift in Sources */,
 				2038828823D75CD000C25FFD /* arSceneView.swift in Sources */,
+				208D920A23DBD25000E3733A /* Reachability.swift in Sources */,
 				2050B90C23DA47B700313D9F /* CVPixelBuffer+TransformedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

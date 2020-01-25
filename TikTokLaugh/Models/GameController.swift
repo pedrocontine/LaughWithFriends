@@ -29,7 +29,9 @@ class GameController {
     func addCounter(player: Player) {
         player.counter += 1
         orderPlayers()
+        
         delegate?.updateScoreLabel()
+        delegate?.takeScreenshot()
     }
     
     func addPlayer(faceAnchor: ARFaceAnchor, node: SCNNode, geometry: ARSCNFaceGeometry) {
@@ -103,4 +105,5 @@ protocol GameControllerDelegate: class {
     func addScene()
     func updateScoreLabel()
     func updatePlayerRanking()
+    func takeScreenshot()
 }
