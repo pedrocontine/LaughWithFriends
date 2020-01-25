@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		202415EA23DA3D5100BD13C2 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202415E923DA3D5100BD13C2 /* EndGameViewController.swift */; };
+		202BCD9023D63AD2008BB6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202BCD8F23D63AD2008BB6A7 /* AppDelegate.swift */; };
+		202BCD9223D63AD2008BB6A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202BCD9123D63AD2008BB6A7 /* SceneDelegate.swift */; };
+		202BCD9723D63AD2008BB6A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202BCD9523D63AD2008BB6A7 /* Main.storyboard */; };
+		202BCD9923D63AD6008BB6A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202BCD9823D63AD6008BB6A7 /* Assets.xcassets */; };
+		202BCD9C23D63AD6008BB6A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202BCD9A23D63AD6008BB6A7 /* LaunchScreen.storyboard */; };
+		202BCDA623D64746008BB6A7 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202BCDA523D64746008BB6A7 /* NetworkExtension.framework */; };
+		2038828823D75CD000C25FFD /* arSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2038828723D75CD000C25FFD /* arSceneView.swift */; };
+		2038828B23D75F2700C25FFD /* YoutubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2038828A23D75F2700C25FFD /* YoutubePlayer.swift */; };
+		2050B90423DA479E00313D9F /* VideoTexturedFace.shader in Resources */ = {isa = PBXBuildFile; fileRef = 2050B90323DA479E00313D9F /* VideoTexturedFace.shader */; };
+		2050B90923DA47B700313D9F /* TrackingState+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050B90523DA47B700313D9F /* TrackingState+Description.swift */; };
+		2050B90A23DA47B700313D9F /* ARFrame+TransformedDepthImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050B90623DA47B700313D9F /* ARFrame+TransformedDepthImage.swift */; };
+		2050B90B23DA47B700313D9F /* SCNMatrix4+affineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050B90723DA47B700313D9F /* SCNMatrix4+affineTransform.swift */; };
+		2050B90C23DA47B700313D9F /* CVPixelBuffer+TransformedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050B90823DA47B700313D9F /* CVPixelBuffer+TransformedImage.swift */; };
+		2050B90E23DA4F2600313D9F /* ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2050B90D23DA4F2600313D9F /* ship.scn */; };
+		2050B91523DA7A8400313D9F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050B91423DA7A8400313D9F /* Colors.swift */; };
+		208D920823DBC43300E3733A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208D920723DBC43300E3733A /* CloudKit.framework */; };
+		20EC1B3F23D904E900402785 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B3E23D904E900402785 /* GameController.swift */; };
+		20EC1B4123D9056800402785 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4023D9056800402785 /* Player.swift */; };
+		20EC1B4323D9057900402785 /* PlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4223D9057900402785 /* PlayerStatus.swift */; };
+		20EC1B4523D913BF00402785 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4423D913BF00402785 /* GameViewController.swift */; };
+		20EC1B4723D9166700402785 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4623D9166700402785 /* PlayerTableViewCell.swift */; };
+		20EC1B4B23D917AA00402785 /* SceneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4A23D917AA00402785 /* SceneTableView.swift */; };
+		20EC1B4D23D9EE2A00402785 /* GameStartMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20EC1B4C23D9EE2900402785 /* GameStartMenu.xib */; };
+		20EC1B5023D9FB5700402785 /* GameStartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4F23D9FB5700402785 /* GameStartMenu.swift */; };
+		20EC1B5223D9FDF700402785 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B5123D9FDF700402785 /* GameMode.swift */; };
+		20FCA31023DA20FC00302D2A /* VideoPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCA30F23DA20FC00302D2A /* VideoPlayerState.swift */; };
+		6D2B5DC535AC97008BA46D78 /* Pods_TikTokLaugh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB2A0E88A082099EC103AA2 /* Pods_TikTokLaugh.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		202415E923DA3D5100BD13C2 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		202BCD8C23D63AD2008BB6A7 /* TikTokLaugh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokLaugh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		202BCD8F23D63AD2008BB6A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		202BCD9123D63AD2008BB6A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		202BCD9623D63AD2008BB6A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		202BCD9823D63AD6008BB6A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		202BCD9B23D63AD6008BB6A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		202BCD9D23D63AD6008BB6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		202BCDA323D64746008BB6A7 /* TikTokLaugh.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TikTokLaugh.entitlements; sourceTree = "<group>"; };
+		202BCDA523D64746008BB6A7 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		2038828723D75CD000C25FFD /* arSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arSceneView.swift; sourceTree = "<group>"; };
+		2038828A23D75F2700C25FFD /* YoutubePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubePlayer.swift; sourceTree = "<group>"; };
+		2050B90323DA479E00313D9F /* VideoTexturedFace.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoTexturedFace.shader; sourceTree = "<group>"; };
+		2050B90523DA47B700313D9F /* TrackingState+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TrackingState+Description.swift"; sourceTree = "<group>"; };
+		2050B90623DA47B700313D9F /* ARFrame+TransformedDepthImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARFrame+TransformedDepthImage.swift"; sourceTree = "<group>"; };
+		2050B90723DA47B700313D9F /* SCNMatrix4+affineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNMatrix4+affineTransform.swift"; sourceTree = "<group>"; };
+		2050B90823DA47B700313D9F /* CVPixelBuffer+TransformedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+TransformedImage.swift"; sourceTree = "<group>"; };
+		2050B90D23DA4F2600313D9F /* ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ship.scn; sourceTree = "<group>"; };
+		2050B91423DA7A8400313D9F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		208D920723DBC43300E3733A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		20EC1B3E23D904E900402785 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		20EC1B4023D9056800402785 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		20EC1B4223D9057900402785 /* PlayerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatus.swift; sourceTree = "<group>"; };
+		20EC1B4423D913BF00402785 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		20EC1B4623D9166700402785 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		20EC1B4A23D917AA00402785 /* SceneTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTableView.swift; sourceTree = "<group>"; };
+		20EC1B4C23D9EE2900402785 /* GameStartMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStartMenu.xib; sourceTree = "<group>"; };
+		20EC1B4F23D9FB5700402785 /* GameStartMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartMenu.swift; sourceTree = "<group>"; };
+		20EC1B5123D9FDF700402785 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		20FCA30F23DA20FC00302D2A /* VideoPlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerState.swift; sourceTree = "<group>"; };
+		2BB2A0E88A082099EC103AA2 /* Pods_TikTokLaugh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokLaugh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B16943CE52AB45669E31A64D /* Pods-TikTokLaugh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokLaugh.release.xcconfig"; path = "Target Support Files/Pods-TikTokLaugh/Pods-TikTokLaugh.release.xcconfig"; sourceTree = "<group>"; };
+		CCB537B663EBEC4892DF9F64 /* Pods-TikTokLaugh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokLaugh.debug.xcconfig"; path = "Target Support Files/Pods-TikTokLaugh/Pods-TikTokLaugh.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		202BCD8923D63AD2008BB6A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208D920823DBC43300E3733A /* CloudKit.framework in Frameworks */,
+				202BCDA623D64746008BB6A7 /* NetworkExtension.framework in Frameworks */,
+				6D2B5DC535AC97008BA46D78 /* Pods_TikTokLaugh.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10D3D2E688479AE77F5C5777 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCB537B663EBEC4892DF9F64 /* Pods-TikTokLaugh.debug.xcconfig */,
+				B16943CE52AB45669E31A64D /* Pods-TikTokLaugh.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		202415E823DA3D3600BD13C2 /* EndGame */ = {
+			isa = PBXGroup;
+			children = (
+				202415E923DA3D5100BD13C2 /* EndGameViewController.swift */,
+			);
+			path = EndGame;
+			sourceTree = "<group>";
+		};
+		202BCD8323D63AD2008BB6A7 = {
+			isa = PBXGroup;
+			children = (
+				202BCD8E23D63AD2008BB6A7 /* TikTokLaugh */,
+				202BCD8D23D63AD2008BB6A7 /* Products */,
+				202BCDA423D64746008BB6A7 /* Frameworks */,
+				10D3D2E688479AE77F5C5777 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		202BCD8D23D63AD2008BB6A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				202BCD8C23D63AD2008BB6A7 /* TikTokLaugh.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		202BCD8E23D63AD2008BB6A7 /* TikTokLaugh */ = {
+			isa = PBXGroup;
+			children = (
+				2050B91323DA7A7B00313D9F /* Utils */,
+				2050B90223DA478000313D9F /* Shaders */,
+				20FCA31223DA28EF00302D2A /* Modules */,
+				20EC1B3D23D904DD00402785 /* Models */,
+				202BCDA323D64746008BB6A7 /* TikTokLaugh.entitlements */,
+				202BCD8F23D63AD2008BB6A7 /* AppDelegate.swift */,
+				202BCD9123D63AD2008BB6A7 /* SceneDelegate.swift */,
+				202BCD9523D63AD2008BB6A7 /* Main.storyboard */,
+				202BCD9823D63AD6008BB6A7 /* Assets.xcassets */,
+				202BCD9A23D63AD6008BB6A7 /* LaunchScreen.storyboard */,
+				202BCD9D23D63AD6008BB6A7 /* Info.plist */,
+			);
+			path = TikTokLaugh;
+			sourceTree = "<group>";
+		};
+		202BCDA423D64746008BB6A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				208D920723DBC43300E3733A /* CloudKit.framework */,
+				202BCDA523D64746008BB6A7 /* NetworkExtension.framework */,
+				2BB2A0E88A082099EC103AA2 /* Pods_TikTokLaugh.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2038828923D75F0A00C25FFD /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				20EC1B4E23D9FB0100402785 /* CustomStartView */,
+				20EC1B4423D913BF00402785 /* GameViewController.swift */,
+				20EC1B4A23D917AA00402785 /* SceneTableView.swift */,
+				2038828723D75CD000C25FFD /* arSceneView.swift */,
+				2038828A23D75F2700C25FFD /* YoutubePlayer.swift */,
+				20EC1B4623D9166700402785 /* PlayerTableViewCell.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		2050B90123DA477800313D9F /* ShaderModel */ = {
+			isa = PBXGroup;
+			children = (
+				2050B90D23DA4F2600313D9F /* ship.scn */,
+				2050B90623DA47B700313D9F /* ARFrame+TransformedDepthImage.swift */,
+				2050B90823DA47B700313D9F /* CVPixelBuffer+TransformedImage.swift */,
+				2050B90723DA47B700313D9F /* SCNMatrix4+affineTransform.swift */,
+				2050B90523DA47B700313D9F /* TrackingState+Description.swift */,
+			);
+			path = ShaderModel;
+			sourceTree = "<group>";
+		};
+		2050B90223DA478000313D9F /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				2050B90323DA479E00313D9F /* VideoTexturedFace.shader */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		2050B91323DA7A7B00313D9F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2050B91423DA7A8400313D9F /* Colors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		20EC1B3D23D904DD00402785 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2050B90123DA477800313D9F /* ShaderModel */,
+				20EC1B3E23D904E900402785 /* GameController.swift */,
+				20EC1B4023D9056800402785 /* Player.swift */,
+				20EC1B4223D9057900402785 /* PlayerStatus.swift */,
+				20EC1B5123D9FDF700402785 /* GameMode.swift */,
+				20FCA30F23DA20FC00302D2A /* VideoPlayerState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20EC1B4E23D9FB0100402785 /* CustomStartView */ = {
+			isa = PBXGroup;
+			children = (
+				20EC1B4C23D9EE2900402785 /* GameStartMenu.xib */,
+				20EC1B4F23D9FB5700402785 /* GameStartMenu.swift */,
+			);
+			path = CustomStartView;
+			sourceTree = "<group>";
+		};
+		20FCA31223DA28EF00302D2A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				202415E823DA3D3600BD13C2 /* EndGame */,
+				2038828923D75F0A00C25FFD /* GameView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		202BCD8B23D63AD2008BB6A7 /* TikTokLaugh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 202BCDA023D63AD6008BB6A7 /* Build configuration list for PBXNativeTarget "TikTokLaugh" */;
+			buildPhases = (
+				1D2B88616B94A9F985BB7E8C /* [CP] Check Pods Manifest.lock */,
+				202BCD8823D63AD2008BB6A7 /* Sources */,
+				202BCD8923D63AD2008BB6A7 /* Frameworks */,
+				202BCD8A23D63AD2008BB6A7 /* Resources */,
+				CFA14A02AE8538349C0EE27C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TikTokLaugh;
+			productName = TikTokLaugh;
+			productReference = 202BCD8C23D63AD2008BB6A7 /* TikTokLaugh.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		202BCD8423D63AD2008BB6A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Pedro Contine";
+				TargetAttributes = {
+					202BCD8B23D63AD2008BB6A7 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 202BCD8723D63AD2008BB6A7 /* Build configuration list for PBXProject "TikTokLaugh" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 202BCD8323D63AD2008BB6A7;
+			productRefGroup = 202BCD8D23D63AD2008BB6A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				202BCD8B23D63AD2008BB6A7 /* TikTokLaugh */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		202BCD8A23D63AD2008BB6A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2050B90423DA479E00313D9F /* VideoTexturedFace.shader in Resources */,
+				20EC1B4D23D9EE2A00402785 /* GameStartMenu.xib in Resources */,
+				2050B90E23DA4F2600313D9F /* ship.scn in Resources */,
+				202BCD9C23D63AD6008BB6A7 /* LaunchScreen.storyboard in Resources */,
+				202BCD9923D63AD6008BB6A7 /* Assets.xcassets in Resources */,
+				202BCD9723D63AD2008BB6A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D2B88616B94A9F985BB7E8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TikTokLaugh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA14A02AE8538349C0EE27C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTokLaugh/Pods-TikTokLaugh-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTokLaugh/Pods-TikTokLaugh-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTokLaugh/Pods-TikTokLaugh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		202BCD8823D63AD2008BB6A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20EC1B3F23D904E900402785 /* GameController.swift in Sources */,
+				20EC1B5023D9FB5700402785 /* GameStartMenu.swift in Sources */,
+				20FCA31023DA20FC00302D2A /* VideoPlayerState.swift in Sources */,
+				20EC1B4523D913BF00402785 /* GameViewController.swift in Sources */,
+				2050B90A23DA47B700313D9F /* ARFrame+TransformedDepthImage.swift in Sources */,
+				202BCD9023D63AD2008BB6A7 /* AppDelegate.swift in Sources */,
+				2038828B23D75F2700C25FFD /* YoutubePlayer.swift in Sources */,
+				20EC1B4123D9056800402785 /* Player.swift in Sources */,
+				202BCD9223D63AD2008BB6A7 /* SceneDelegate.swift in Sources */,
+				20EC1B4B23D917AA00402785 /* SceneTableView.swift in Sources */,
+				2050B90923DA47B700313D9F /* TrackingState+Description.swift in Sources */,
+				2050B90B23DA47B700313D9F /* SCNMatrix4+affineTransform.swift in Sources */,
+				2050B91523DA7A8400313D9F /* Colors.swift in Sources */,
+				20EC1B5223D9FDF700402785 /* GameMode.swift in Sources */,
+				20EC1B4723D9166700402785 /* PlayerTableViewCell.swift in Sources */,
+				20EC1B4323D9057900402785 /* PlayerStatus.swift in Sources */,
+				202415EA23DA3D5100BD13C2 /* EndGameViewController.swift in Sources */,
+				2038828823D75CD000C25FFD /* arSceneView.swift in Sources */,
+				2050B90C23DA47B700313D9F /* CVPixelBuffer+TransformedImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		202BCD9523D63AD2008BB6A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				202BCD9623D63AD2008BB6A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		202BCD9A23D63AD6008BB6A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				202BCD9B23D63AD6008BB6A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		202BCD9E23D63AD6008BB6A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		202BCD9F23D63AD6008BB6A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		202BCDA123D63AD6008BB6A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCB537B663EBEC4892DF9F64 /* Pods-TikTokLaugh.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TikTokLaugh/TikTokLaugh.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FS3B5ULP9R;
+				INFOPLIST_FILE = TikTokLaugh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = continepedro.laughwithfriends;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		202BCDA223D63AD6008BB6A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B16943CE52AB45669E31A64D /* Pods-TikTokLaugh.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TikTokLaugh/TikTokLaugh.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FS3B5ULP9R;
+				INFOPLIST_FILE = TikTokLaugh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = continepedro.laughwithfriends;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		202BCD8723D63AD2008BB6A7 /* Build configuration list for PBXProject "TikTokLaugh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				202BCD9E23D63AD6008BB6A7 /* Debug */,
+				202BCD9F23D63AD6008BB6A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		202BCDA023D63AD6008BB6A7 /* Build configuration list for PBXNativeTarget "TikTokLaugh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				202BCDA123D63AD6008BB6A7 /* Debug */,
+				202BCDA223D63AD6008BB6A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 202BCD8423D63AD2008BB6A7 /* Project object */;
+}
