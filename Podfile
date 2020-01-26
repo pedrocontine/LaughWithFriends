@@ -7,4 +7,5 @@ target 'TikTokLaugh' do
 
   # Pods for TikTokLaugh
 pod "YoutubePlayer-in-WKWebView", "~> 0.3.0"
+pod 'Google-Mobile-Ads-SDK'
 end

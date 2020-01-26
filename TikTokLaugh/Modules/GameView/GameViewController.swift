@@ -9,8 +9,9 @@
 import UIKit
 import ARKit
 import YoutubePlayer_in_WKWebView
+import GoogleMobileAds
 
-class GameViewController: UIViewController, GameControllerDelegate, GameStartMenuDelegate {
+class GameViewController: UIViewController, GameControllerDelegate, GameStartMenuDelegate, GADInterstitialDelegate {
     
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var internetMessage: UILabel!
@@ -22,6 +23,7 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     
     var boundsSize : CGSize!
     
+    var interstitial: GADInterstitial!
     var gameController: GameController!
     var playlist: [String] = []
     var screenshot: UIImage?
@@ -34,6 +36,7 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
         
         initARScene()
         initGameStartMenu()
+        initInterstitial()
         
         tableView.reloadData()
     }
@@ -79,6 +82,18 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
         boundsSize = arSceneView.bounds.size
         
         verifyFaceTrackingAvailability()
+    }
+    
+    func initInterstitial() {
+        //interstitial = GADInterstitial(adUnitID: "ca-app-pub-4893647003110985/7489510343")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.delegate = self
+        let request = GADRequest()
+        interstitial.load(request)
+    }
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        performSegue(withIdentifier: "showEndGame", sender: nil)
     }
     
     @IBAction func refreshButtonPressed() {

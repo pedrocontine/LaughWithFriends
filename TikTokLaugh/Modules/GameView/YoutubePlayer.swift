@@ -15,7 +15,7 @@ extension GameViewController: WKYTPlayerViewDelegate {
     func loadVideo() {
         self.getPlaylists { (records) in
             guard let records = records,
-                  let playlist = self.createRandomPlaylist(records: records, count: 1) else {return}
+                  let playlist = self.createRandomPlaylist(records: records, count: 5) else {return}
             
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
@@ -41,9 +41,10 @@ extension GameViewController: WKYTPlayerViewDelegate {
     }
     
     func videoConfigs() -> [String : Any] {
-        return ["autoplay" : 0,
-                "controls" : 0,
+        return ["autoplay" : 1,
+                "controls" : 1,
                 "playsinline" : 1,
+                "origin": "https://www.youtube.com",
                 "enablejsapi": 1,
                 "iv_load_policy": 3,
                 "modestbranding": 1,
@@ -75,7 +76,9 @@ extension GameViewController: WKYTPlayerViewDelegate {
             gameController.isPlaying = false
         case .ended:
             gameController.isPlaying = false
-            performSegue(withIdentifier: "showEndGame", sender: nil)
+            if interstitial.isReady {
+              interstitial.present(fromRootViewController: self)
+            }
         default:
             gameController.isPlaying = true
         }
@@ -87,3 +90,4 @@ extension GameViewController: WKYTPlayerViewDelegate {
     }
     
 }
+
