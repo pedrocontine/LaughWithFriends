@@ -33,11 +33,11 @@ extension GameViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 120, height: 2))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 120, height: 3))
         view.backgroundColor = .clear
         return view
     }

@@ -11,7 +11,7 @@ import ARKit
 import YoutubePlayer_in_WKWebView
 
 class GameViewController: UIViewController, GameControllerDelegate, GameStartMenuDelegate {
-
+    
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var internetMessage: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -106,12 +106,25 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
             initVideoPlayer()
             videoPlayer.playVideo()
         }
+        else {
+            showNoPlayersMassage()
+        }
+    }
+    
+    func showNoPlayersMassage() {
+        let alertController = UIAlertController(title: "No players!", message: "Move your camera to detect faces", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+        
+       self.present(alertController, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showEndGame" {
             let vc = segue.destination as! EndGameViewController
             vc.screenshot = self.screenshot
+            vc.players = self.gameController.players
         }
     }
     
@@ -124,40 +137,6 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     func updatePlayerRanking() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
-        }
-    }
-    
-    func addScene() {
-        let index = gameController.players.count - 1
-        let player = gameController.players[index]
-        
-        let sceneView = player.scene
-        
-        sceneView.scene = SCNScene(named: "ship.scn")
-
-        let emptyNode = sceneView.scene?.rootNode.childNode(withName: "emptyNode", recursively: true)
-
-        emptyNode?.geometry = player.node.geometry
-
-        let color = getPlayerFaceColor(index: index)
-        emptyNode?.geometry?.materials.first?.diffuse.contents = color
-        
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-        
-    }
-    
-    func getPlayerFaceColor(index: Int) -> UIColor {
-        switch index {
-        case 0:
-            return UIColor.Custom.red
-        case 1:
-            return UIColor.Custom.blue
-        case 2:
-            return UIColor.Custom.green
-        default:
-            return .yellow
         }
     }
     

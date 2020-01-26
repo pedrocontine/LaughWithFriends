@@ -6,20 +6,23 @@
 //  Copyright © 2020 Pedro Contine. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import ARKit
 
 class Player {
-    var geometry: ARSCNFaceGeometry
+    //var geometry: ARSCNFaceGeometry
     var faceAnchor: ARFaceAnchor
     var node: SCNNode
     var counter: Int = 0
     var status: PlayerStatus = .normal
     var scene: SCNView = SCNView()
+    var image: UIImage
+    var num: Int
     
-    init(faceAnchor: ARFaceAnchor, node: SCNNode, geometry: ARSCNFaceGeometry) {
+    init(faceAnchor: ARFaceAnchor, node: SCNNode, num: Int) {
         self.faceAnchor = faceAnchor
         self.node = node
-        self.geometry = geometry
+        self.num = num
+        self.image = UIImage(named: "p\(num)_normal")!
     }
 }

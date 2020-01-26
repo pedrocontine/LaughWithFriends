@@ -83,6 +83,7 @@ extension GameViewController: WKYTPlayerViewDelegate {
     
     func playerViewDidBecomeReady(_ playerView: WKYTPlayerView) {
         playerView.cuePlaylist(byVideos: self.playlist, index: 0, startSeconds: 0, suggestedQuality: .auto)
+        playerView.playVideo()
     }
     
 }

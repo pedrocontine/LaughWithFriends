@@ -11,16 +11,17 @@ import ARKit
 
 class PlayerTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var sceneView: SCNView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var playerImage: UIImageView!
     
-    func setCell(player: Player) {        
-        self.sceneView.isPlaying = true
-        self.sceneView.layer.borderWidth = 2
-        self.sceneView.layer.borderColor = UIColor.white.cgColor
-        self.sceneView.layer.cornerRadius = 30
-        self.sceneView.layer.masksToBounds = true
-        self.sceneView.scene = player.scene.scene
+    func setCell(player: Player) {
+        self.playerImage.image = player.image
+        
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.cornerRadius = 30
+        self.layer.masksToBounds = true
+        
         self.scoreLabel.text = "\(player.counter)"
     }
 

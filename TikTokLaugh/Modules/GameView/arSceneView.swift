@@ -20,31 +20,12 @@ extension GameViewController: ARSCNViewDelegate {
         
         guard let device = sceneView.device else { return nil }
         guard let faceGeometry = ARSCNFaceGeometry(device: device, fillMesh: true) else { return nil }
-               
-//        if let material = faceGeometry.firstMaterial {
-//            material.diffuse.contents = arSceneView.scene.background.contents
-//            material.lightingModel = .constant // .physicallyBased
-//
-//            guard let shaderURL = Bundle.main.url(forResource: "VideoTexturedFace", withExtension: "shader"),
-//                  let modifier = try? String(contentsOf: shaderURL)
-//                else {return nil}
-//
-//            faceGeometry.shaderModifiers = [ .geometry: modifier]
-//
-//            // Pass view-appropriate image transform to the shader modifier so
-//            // that the mapped video lines up correctly with the background video.
-//            let affineTransform = frame.displayTransform(for: .landscapeRight, viewportSize: boundsSize)
-//
-//            let transform = SCNMatrix4(affineTransform)
-//
-//            faceGeometry.setValue(SCNMatrix4Invert(transform), forKey: "displayTransform")
-//        }
         
         let faceNode = SCNNode(geometry: faceGeometry)
         
         faceNode.geometry?.firstMaterial?.fillMode = .lines
-        //faceNode.geometry?.firstMaterial?.transparency = 0.0
-        
+        faceNode.geometry?.firstMaterial?.transparency = 0.0
+                
         gameController.addPlayer(faceAnchor: faceAnchor, node: faceNode, geometry: faceGeometry)
         
         return faceNode
@@ -62,22 +43,27 @@ extension GameViewController: ARSCNViewDelegate {
         gameController.handleSmile(faceAnchor: faceAnchor)
     }
     
-//    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-//        let image = insertImage(image: UIImage(named: "lion")!)
-//        node.addChildNode(image)
-//    }
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard let faceAnchor = anchor as? ARFaceAnchor else {return}
+        let image = gameController.getPlayer(faceAnchor: faceAnchor)?.image
+        
+        let imageNode = insertImage(image: image!)
+        node.addChildNode(imageNode)
+    }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         self.checkCameraPermission()
     }
     
-    func insertImage(image: UIImage, width: CGFloat = 0.2, height: CGFloat = 0.2) -> SCNNode {
+    func insertImage(image: UIImage, width: CGFloat = 0.05, height: CGFloat = 0.045) -> SCNNode {
         let plane = SCNPlane(width: width, height: height)
         plane.firstMaterial!.diffuse.contents = image
+        
         let node = SCNNode(geometry: plane)
+        let pos = node.position
+        node.position = SCNVector3(pos.x, pos.y + 0.15, pos.z)
         node.constraints = [SCNBillboardConstraint()]
         return node
     }
 
-    
 }

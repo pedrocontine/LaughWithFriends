@@ -27,6 +27,8 @@ class GameController {
     }
     
     func addCounter(player: Player) {
+        if !isPlaying { return }
+        
         player.counter += 1
         orderPlayers()
         
@@ -36,10 +38,12 @@ class GameController {
     
     func addPlayer(faceAnchor: ARFaceAnchor, node: SCNNode, geometry: ARSCNFaceGeometry) {
         if getPlayer(faceAnchor: faceAnchor) == nil && self.canAddPlayer() {
-            let newPlayer = Player(faceAnchor: faceAnchor, node: node, geometry: geometry)
+            let num = players.count + 1
+            let newPlayer = Player(faceAnchor: faceAnchor, node: node, num: num)
             players.append(newPlayer)
-            delegate?.addScene()
         }
+        
+        delegate?.updatePlayerRanking()
     }
     
     func canStart() -> Bool {
@@ -64,8 +68,6 @@ class GameController {
     }
     
     func handleSmile(faceAnchor: ARFaceAnchor) {
-        if !isPlaying { return }
-        
         guard let player = getPlayer(faceAnchor: faceAnchor) else {return}
         
         let smileValue = getSmileValue(faceAnchor: faceAnchor)
@@ -78,6 +80,18 @@ class GameController {
         else if !laughing {
             player.status = .normal
         }
+        
+        updatePlayerImage(player: player)
+    }
+    
+    func updatePlayerImage(player: Player) {
+        switch player.status {
+        case .laughing:
+            player.image = UIImage(named: "p\(player.num)_smile")!
+        case .normal:
+            player.image = UIImage(named: "p\(player.num)_normal")!
+        }
+        delegate?.updatePlayerRanking()
     }
     
     func wasLaughing(player: Player) -> Bool {
@@ -102,7 +116,6 @@ class GameController {
 }
 
 protocol GameControllerDelegate: class {
-    func addScene()
     func updateScoreLabel()
     func updatePlayerRanking()
     func takeScreenshot()
