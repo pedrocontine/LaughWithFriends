@@ -29,6 +29,8 @@
 		208D921023DC097300E3733A /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D920F23DC097300E3733A /* Haptic.swift */; };
 		2093AEDB23DCCF3C005CA220 /* CameraPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093AEDA23DCCF3C005CA220 /* CameraPermission.swift */; };
 		20C3419323DD242B003377B5 /* ScoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3419223DD242A003377B5 /* ScoreCollectionViewCell.swift */; };
+		20CDF7FF23DFABEA0000748C /* YoutubeVideoQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDF7FE23DFABEA0000748C /* YoutubeVideoQuality.swift */; };
+		20E5D27623DF57CA00C7A982 /* CloudkitDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5D27523DF57CA00C7A982 /* CloudkitDAO.swift */; };
 		20EC1B3F23D904E900402785 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B3E23D904E900402785 /* GameController.swift */; };
 		20EC1B4123D9056800402785 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4023D9056800402785 /* Player.swift */; };
 		20EC1B4323D9057900402785 /* PlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4223D9057900402785 /* PlayerStatus.swift */; };
@@ -39,10 +41,11 @@
 		20EC1B5023D9FB5700402785 /* GameStartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4F23D9FB5700402785 /* GameStartMenu.swift */; };
 		20EC1B5223D9FDF700402785 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B5123D9FDF700402785 /* GameMode.swift */; };
 		20FCA31023DA20FC00302D2A /* VideoPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCA30F23DA20FC00302D2A /* VideoPlayerState.swift */; };
-		6D2B5DC535AC97008BA46D78 /* Pods_TikTokLaugh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB2A0E88A082099EC103AA2 /* Pods_TikTokLaugh.framework */; };
+		B32453D65ECA34CE2CBBD2D6 /* Pods_TikTokLaugh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160DA034D03169FD794CD041 /* Pods_TikTokLaugh.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160DA034D03169FD794CD041 /* Pods_TikTokLaugh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokLaugh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		202415E923DA3D5100BD13C2 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 		202BCD8C23D63AD2008BB6A7 /* 3Smile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3Smile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		202BCD8F23D63AD2008BB6A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 		208D920F23DC097300E3733A /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		2093AEDA23DCCF3C005CA220 /* CameraPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermission.swift; sourceTree = "<group>"; };
 		20C3419223DD242A003377B5 /* ScoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		20CDF7FE23DFABEA0000748C /* YoutubeVideoQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoQuality.swift; sourceTree = "<group>"; };
+		20E5D27523DF57CA00C7A982 /* CloudkitDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudkitDAO.swift; sourceTree = "<group>"; };
 		20EC1B3E23D904E900402785 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		20EC1B4023D9056800402785 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		20EC1B4223D9057900402785 /* PlayerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatus.swift; sourceTree = "<group>"; };
@@ -78,9 +83,8 @@
 		20EC1B4F23D9FB5700402785 /* GameStartMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartMenu.swift; sourceTree = "<group>"; };
 		20EC1B5123D9FDF700402785 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		20FCA30F23DA20FC00302D2A /* VideoPlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerState.swift; sourceTree = "<group>"; };
-		2BB2A0E88A082099EC103AA2 /* Pods_TikTokLaugh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokLaugh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B16943CE52AB45669E31A64D /* Pods-TikTokLaugh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokLaugh.release.xcconfig"; path = "Target Support Files/Pods-TikTokLaugh/Pods-TikTokLaugh.release.xcconfig"; sourceTree = "<group>"; };
-		CCB537B663EBEC4892DF9F64 /* Pods-TikTokLaugh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokLaugh.debug.xcconfig"; path = "Target Support Files/Pods-TikTokLaugh/Pods-TikTokLaugh.debug.xcconfig"; sourceTree = "<group>"; };
+		3BE784BBEE943C68A855212E /* Pods-TikTokLaugh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokLaugh.release.xcconfig"; path = "Target Support Files/Pods-TikTokLaugh/Pods-TikTokLaugh.release.xcconfig"; sourceTree = "<group>"; };
+		48C771C49023AEE8F88E281C /* Pods-TikTokLaugh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokLaugh.debug.xcconfig"; path = "Target Support Files/Pods-TikTokLaugh/Pods-TikTokLaugh.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +94,7 @@
 			files = (
 				208D920823DBC43300E3733A /* CloudKit.framework in Frameworks */,
 				202BCDA623D64746008BB6A7 /* NetworkExtension.framework in Frameworks */,
-				6D2B5DC535AC97008BA46D78 /* Pods_TikTokLaugh.framework in Frameworks */,
+				B32453D65ECA34CE2CBBD2D6 /* Pods_TikTokLaugh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +104,8 @@
 		10D3D2E688479AE77F5C5777 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CCB537B663EBEC4892DF9F64 /* Pods-TikTokLaugh.debug.xcconfig */,
-				B16943CE52AB45669E31A64D /* Pods-TikTokLaugh.release.xcconfig */,
+				48C771C49023AEE8F88E281C /* Pods-TikTokLaugh.debug.xcconfig */,
+				3BE784BBEE943C68A855212E /* Pods-TikTokLaugh.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -156,7 +160,7 @@
 			children = (
 				208D920723DBC43300E3733A /* CloudKit.framework */,
 				202BCDA523D64746008BB6A7 /* NetworkExtension.framework */,
-				2BB2A0E88A082099EC103AA2 /* Pods_TikTokLaugh.framework */,
+				160DA034D03169FD794CD041 /* Pods_TikTokLaugh.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,6 +174,7 @@
 				2038828723D75CD000C25FFD /* arSceneView.swift */,
 				2038828A23D75F2700C25FFD /* YoutubePlayer.swift */,
 				20EC1B4623D9166700402785 /* PlayerTableViewCell.swift */,
+				20E5D27523DF57CA00C7A982 /* CloudkitDAO.swift */,
 			);
 			path = GameView;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				20EC1B4223D9057900402785 /* PlayerStatus.swift */,
 				20EC1B5123D9FDF700402785 /* GameMode.swift */,
 				20FCA30F23DA20FC00302D2A /* VideoPlayerState.swift */,
+				20CDF7FE23DFABEA0000748C /* YoutubeVideoQuality.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,11 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 202BCDA023D63AD6008BB6A7 /* Build configuration list for PBXNativeTarget "TikTokLaugh" */;
 			buildPhases = (
-				1D2B88616B94A9F985BB7E8C /* [CP] Check Pods Manifest.lock */,
+				341776147F31AA14EF6D595E /* [CP] Check Pods Manifest.lock */,
 				202BCD8823D63AD2008BB6A7 /* Sources */,
 				202BCD8923D63AD2008BB6A7 /* Frameworks */,
 				202BCD8A23D63AD2008BB6A7 /* Resources */,
-				CFA14A02AE8538349C0EE27C /* [CP] Embed Pods Frameworks */,
+				8F578463560B89A0F96D8136 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +315,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D2B88616B94A9F985BB7E8C /* [CP] Check Pods Manifest.lock */ = {
+		341776147F31AA14EF6D595E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,7 +337,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CFA14A02AE8538349C0EE27C /* [CP] Embed Pods Frameworks */ = {
+		8F578463560B89A0F96D8136 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -356,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20EC1B3F23D904E900402785 /* GameController.swift in Sources */,
+				20CDF7FF23DFABEA0000748C /* YoutubeVideoQuality.swift in Sources */,
 				20EC1B5023D9FB5700402785 /* GameStartMenu.swift in Sources */,
 				20FCA31023DA20FC00302D2A /* VideoPlayerState.swift in Sources */,
 				20EC1B4523D913BF00402785 /* GameViewController.swift in Sources */,
@@ -377,6 +384,7 @@
 				20EC1B4323D9057900402785 /* PlayerStatus.swift in Sources */,
 				202415EA23DA3D5100BD13C2 /* EndGameViewController.swift in Sources */,
 				2038828823D75CD000C25FFD /* arSceneView.swift in Sources */,
+				20E5D27623DF57CA00C7A982 /* CloudkitDAO.swift in Sources */,
 				208D920A23DBD25000E3733A /* Reachability.swift in Sources */,
 				2050B90C23DA47B700313D9F /* CVPixelBuffer+TransformedImage.swift in Sources */,
 			);
@@ -520,7 +528,7 @@
 		};
 		202BCDA123D63AD6008BB6A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCB537B663EBEC4892DF9F64 /* Pods-TikTokLaugh.debug.xcconfig */;
+			baseConfigurationReference = 48C771C49023AEE8F88E281C /* Pods-TikTokLaugh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TikTokLaugh/TikTokLaugh.entitlements;
@@ -540,7 +548,7 @@
 		};
 		202BCDA223D63AD6008BB6A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B16943CE52AB45669E31A64D /* Pods-TikTokLaugh.release.xcconfig */;
+			baseConfigurationReference = 3BE784BBEE943C68A855212E /* Pods-TikTokLaugh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TikTokLaugh/TikTokLaugh.entitlements;

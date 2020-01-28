@@ -6,6 +6,6 @@ target 'TikTokLaugh' do
   use_frameworks!
 
   # Pods for TikTokLaugh
-pod "YoutubePlayer-in-WKWebView", "~> 0.3.0"
+pod "XCDYouTubeKit", "~> 2.8"
 pod 'Google-Mobile-Ads-SDK'
 end

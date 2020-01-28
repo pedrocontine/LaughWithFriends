@@ -44,10 +44,11 @@ extension GameViewController: ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard let faceAnchor = anchor as? ARFaceAnchor else {return}
-        let image = gameController.getPlayer(faceAnchor: faceAnchor)?.image
+        guard let faceAnchor = anchor as? ARFaceAnchor,
+              let image = gameController.getPlayer(faceAnchor: faceAnchor)?.image
+        else {return}
         
-        let imageNode = insertImage(image: image!)
+        let imageNode = insertImage(image: image)
         node.addChildNode(imageNode)
     }
     

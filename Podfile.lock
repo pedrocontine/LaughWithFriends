@@ -28,11 +28,11 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - YoutubePlayer-in-WKWebView (0.3.4)
+  - XCDYouTubeKit (2.8.3)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
-  - YoutubePlayer-in-WKWebView (~> 0.3.0)
+  - XCDYouTubeKit (~> 2.8)
 
 SPEC REPOS:
   trunk:
@@ -40,15 +40,15 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - nanopb
-    - YoutubePlayer-in-WKWebView
+    - XCDYouTubeKit
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: fac081606dbd438d8db57198b83ba8b5f875a601
   GoogleAppMeasurement: a08a43b8677b95ed51fcef880e36737334d804fd
   GoogleUtilities: f8de7ddf8c706f58e9b405d53e38bbdaa2731e5a
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  YoutubePlayer-in-WKWebView: af2f5929fc78882d94bfdfeea999b661b78d9717
+  XCDYouTubeKit: 46df93c4dc4d48763ad720d997704384635c4335
 
-PODFILE CHECKSUM: 29ad2fbe49b65501b07e13eec8664b525effbb99
+PODFILE CHECKSUM: eb9a308a087e06fee37468dd17a9d114f0ed5b81
 
 COCOAPODS: 1.8.4

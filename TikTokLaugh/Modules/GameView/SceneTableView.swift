@@ -29,15 +29,17 @@ extension GameViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 117
+        let height = UIScreen.main.bounds.height
+        return height * 0.282
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 120, height: 3))
+        let height = UIScreen.main.bounds.height
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: height * 0.282, height: 2))
         view.backgroundColor = .clear
         return view
     }

@@ -17,6 +17,7 @@ class GameController {
     var smileFactor: CGFloat = 0.6
     var maxPlayers: Int = 3
     var isPlaying: Bool = false
+    var hasScreenshot: Bool = false
     
     func orderPlayers() {
         players.sort { (player1, player2) -> Bool in
@@ -33,7 +34,20 @@ class GameController {
         orderPlayers()
         
         delegate?.updateScoreLabel()
-        delegate?.takeScreenshot()
+        
+        if !hasScreenshot {
+            takeScreenshot()
+        }
+    }
+    
+    //take screenshot when everyone is laughing
+    func takeScreenshot() {
+        let laughingPlayers = players.filter({$0.status == .laughing})
+    
+        if laughingPlayers.count == players.count {
+            hasScreenshot = true
+            delegate?.takeScreenshot()
+        }
     }
     
     func addPlayer(faceAnchor: ARFaceAnchor, node: SCNNode, geometry: ARSCNFaceGeometry) {
