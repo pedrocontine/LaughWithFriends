@@ -8,7 +8,7 @@
 
 import UIKit
 import ARKit
-import XCDYouTubeKit
+import YoutubePlayer_in_WKWebView
 import GoogleMobileAds
 import AVKit
 
@@ -20,7 +20,7 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var gameStartMenu: GameStartMenu!
     @IBOutlet weak var arSceneView: ARSCNView!
-    @IBOutlet weak var videoPlayerView: UIView!
+    @IBOutlet weak var videoPlayer: WKYTPlayerView!
     
     var boundsSize : CGSize!
     
@@ -33,7 +33,6 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     var videosCount : Int = 5
     let moviePlayer = AVPlayerViewController()
     var playlist: [String] = []
-    var currentMovie: Int = 0
 
     func initView() {
         gameController = GameController()
@@ -67,15 +66,10 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     }
     
     func initVideoPlayer() {
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
-        } catch {
-            print("Setting category to AVAudioSessionCategoryPlayback failed.")
-        }
+        videoPlayer.delegate = self
         
         if Reachability.isConnectedToNetwork(){
             refreshButton.isHidden = true
-            videoPlayerView.addSubview(moviePlayer.view)
             loadVideos()
         }
         else {
@@ -187,15 +181,11 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
         configuration.maximumNumberOfTrackedFaces = gameController.maxPlayers
 
         arSceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)        
     }
         
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         arSceneView.session.pause()
-        
-        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }
     
 }
