@@ -37,9 +37,11 @@ class EndGameViewController: UIViewController {
         self.collectionWidth.constant = CGFloat(players.count) * width * 0.103
         self.collectionView.layer.cornerRadius = height * 0.3
         self.collectionView.layer.masksToBounds = true
+        self.collectionView.addShadow()
         
         self.appIcon.layer.cornerRadius = height * 0.3
         self.appIcon.layer.masksToBounds = true
+        self.appIcon.addShadow()
     }
     
     func roundButtons() {
@@ -47,9 +49,12 @@ class EndGameViewController: UIViewController {
         self.instagramButton.adjustsImageWhenHighlighted = false
         self.instagramButton.layer.cornerRadius = height * 0.3
         self.instagramButton.layer.masksToBounds = true
+        self.instagramButton.addShadow()
         
         self.shareButton.layer.cornerRadius = height * 0.3
+        self.shareButton.addShadow()
         self.playAgainButton.layer.cornerRadius = height * 0.3
+        self.playAgainButton.addShadow()
     }
     
     @IBAction func playAgainButtonPressed() {
@@ -101,14 +106,14 @@ extension EndGameViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ScoreCollectionViewCell
         
-        cell.setCell(player: players[indexPath.row])
+        cell.setCell(player: players[indexPath.row], pos: indexPath.row + 1)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let bounds = UIScreen.main.bounds
-        return CGSize(width: bounds.width * 0.089, height: bounds.height * 0.193)
+        return CGSize(width: bounds.width * 0.089, height: bounds.height * 0.20)
     }
     
 }

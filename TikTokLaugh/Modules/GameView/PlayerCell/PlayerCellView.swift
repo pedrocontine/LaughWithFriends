@@ -1,25 +1,29 @@
 //
-//  ScoreCollectionViewCell.swift
+//  PlayerCellView.swift
 //  TikTokLaugh
 //
-//  Created by Pedro Contine on 25/01/20.
+//  Created by Pedro Contine on 27/01/20.
 //  Copyright © 2020 Pedro Contine. All rights reserved.
 //
 
 import UIKit
 
-class ScoreCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var crown: UIImageView!
-    @IBOutlet weak var medalLayer: UIView!
-    @IBOutlet weak var blackBackground: UIView!
+class PlayerCellView: UITableViewCell {
+
     @IBOutlet weak var playerImage: UIImageView!
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var layerScore: UIView!
+    @IBOutlet weak var blackBackground: UIView!
+    @IBOutlet weak var medalLayer: UIView!
+    @IBOutlet weak var rankingLayer: UIView!
     
     func setCell(player: Player, pos: Int) {
         let height = self.layerScore.bounds.height
         self.playerImage.image = player.image
+        
+        //self.blackBackground.alpha = updateImageAlpha(isOnScreen: player.isOnScreen)
+        //self.rankingLayer.alpha = updateImageAlpha(isOnScreen: player.isOnScreen)
+        
         self.score.text = "\(player.counter)"
         
         self.backgroundColor = .clear
@@ -31,19 +35,23 @@ class ScoreCollectionViewCell: UICollectionViewCell {
         
         self.layerScore.backgroundColor = getMedalColor(pos: pos)
         self.layerScore.layer.cornerRadius = height * 0.5
+        self.medalLayer.layer.cornerRadius = height * 0.5
+        self.medalLayer.backgroundColor = getMedalColor(pos: pos)
         
-        let medalHeight = self.medalLayer.frame.height
-        self.medalLayer.layer.cornerRadius = medalHeight * 0.5
-        //self.medalLayer.backgroundColor = getMedalColor(pos: pos)
+        let rankLayerHeight = self.rankingLayer.frame.height
+        self.rankingLayer.layer.cornerRadius = rankLayerHeight * 0.5
         
         self.blackBackground.addShadow()
         self.medalLayer.addShadow()
         self.layerScore.addShadow()
-        
-        if pos == 1 {
-            self.crown.isHidden = false
-        } else {
-            self.crown.isHidden = true
+    }
+    
+    func updateImageAlpha(isOnScreen: Bool) -> CGFloat {
+        switch isOnScreen {
+        case true:
+            return 1
+        case false:
+            return 0.5
         }
     }
     
@@ -59,5 +67,5 @@ class ScoreCollectionViewCell: UICollectionViewCell {
             return .white
         }
     }
-    
+
 }

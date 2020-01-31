@@ -37,7 +37,7 @@ extension GameViewController: ARSCNViewDelegate {
         guard let faceAnchor = anchor as? ARFaceAnchor,
               let faceGeometry = node.geometry as? ARSCNFaceGeometry else
         { return }
-          
+        
         faceGeometry.update(from: faceAnchor.geometry)
           
         gameController.handleSmile(faceAnchor: faceAnchor)
@@ -56,6 +56,36 @@ extension GameViewController: ARSCNViewDelegate {
         self.checkCameraPermission()
     }
     
+//    public func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+//        guard let renderer = renderer as? ARSCNView else {return}
+//
+//        deltaTime = time - lastUpdateTime
+//
+//        if deltaTime > 1 {
+//            updatePlayersScreenPositions(renderer: renderer)
+//            lastUpdateTime = time
+//        }
+//    }
+    
+    func updatePlayersScreenPositions(renderer: SCNSceneRenderer) {
+        for player in gameController.players {
+            
+            let pos = player.node.position
+            let pPoint = renderer.projectPoint(pos)
+            let point = CGPoint(x: CGFloat(pPoint.x), y: CGFloat(pPoint.y))
+            
+            DispatchQueue.main.async {
+                player.isOnScreen = self.view.frame.contains(point)
+                
+                if !player.isOnScreen{
+                    guard let index = self.gameController.players.firstIndex(where: {$0.num == player.num}) else {return}
+                   
+                    self.tableView.reloadRows(at: [IndexPath(row: 0, section: index)], with: .none)
+                }
+            }
+        }
+    }
+    
     func insertImage(image: UIImage, width: CGFloat = 0.05, height: CGFloat = 0.045) -> SCNNode {
         let plane = SCNPlane(width: width, height: height)
         plane.firstMaterial!.diffuse.contents = image
@@ -68,3 +98,4 @@ extension GameViewController: ARSCNViewDelegate {
     }
 
 }
+

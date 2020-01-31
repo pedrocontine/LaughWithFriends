@@ -18,6 +18,7 @@ class Player {
     var scene: SCNView = SCNView()
     var image: UIImage
     var num: Int
+    var isOnScreen: Bool = true
     
     init(faceAnchor: ARFaceAnchor, node: SCNNode, num: Int) {
         self.faceAnchor = faceAnchor

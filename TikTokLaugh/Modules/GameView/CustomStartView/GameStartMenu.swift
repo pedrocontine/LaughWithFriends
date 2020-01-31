@@ -35,6 +35,7 @@ class GameStartMenu: UIView {
     private func commonInit() {
         Bundle.main.loadNibNamed("GameStartMenu", owner: self, options: nil)
         self.startButton.layer.cornerRadius = 30
+        self.startButton.addShadow()
         self.addSubview(contentView)
     }
         

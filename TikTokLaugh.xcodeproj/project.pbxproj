@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2021520323E09BA900AFFE5C /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021520223E09BA900AFFE5C /* Shadow.swift */; };
 		202415EA23DA3D5100BD13C2 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202415E923DA3D5100BD13C2 /* EndGameViewController.swift */; };
 		202BCD9023D63AD2008BB6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202BCD8F23D63AD2008BB6A7 /* AppDelegate.swift */; };
 		202BCD9223D63AD2008BB6A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202BCD9123D63AD2008BB6A7 /* SceneDelegate.swift */; };
@@ -30,12 +31,13 @@
 		2093AEDB23DCCF3C005CA220 /* CameraPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093AEDA23DCCF3C005CA220 /* CameraPermission.swift */; };
 		20C3419323DD242B003377B5 /* ScoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3419223DD242A003377B5 /* ScoreCollectionViewCell.swift */; };
 		20CDF7FF23DFABEA0000748C /* YoutubeVideoQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDF7FE23DFABEA0000748C /* YoutubeVideoQuality.swift */; };
+		20CDF80123DFBB180000748C /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CDF80023DFBB180000748C /* PlayerCell.xib */; };
+		20CDF80423DFBDFC0000748C /* PlayerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDF80323DFBDFC0000748C /* PlayerCellView.swift */; };
 		20E5D27623DF57CA00C7A982 /* CloudkitDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5D27523DF57CA00C7A982 /* CloudkitDAO.swift */; };
 		20EC1B3F23D904E900402785 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B3E23D904E900402785 /* GameController.swift */; };
 		20EC1B4123D9056800402785 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4023D9056800402785 /* Player.swift */; };
 		20EC1B4323D9057900402785 /* PlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4223D9057900402785 /* PlayerStatus.swift */; };
 		20EC1B4523D913BF00402785 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4423D913BF00402785 /* GameViewController.swift */; };
-		20EC1B4723D9166700402785 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4623D9166700402785 /* PlayerTableViewCell.swift */; };
 		20EC1B4B23D917AA00402785 /* SceneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4A23D917AA00402785 /* SceneTableView.swift */; };
 		20EC1B4D23D9EE2A00402785 /* GameStartMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20EC1B4C23D9EE2900402785 /* GameStartMenu.xib */; };
 		20EC1B5023D9FB5700402785 /* GameStartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC1B4F23D9FB5700402785 /* GameStartMenu.swift */; };
@@ -46,8 +48,9 @@
 
 /* Begin PBXFileReference section */
 		160DA034D03169FD794CD041 /* Pods_TikTokLaugh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokLaugh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2021520223E09BA900AFFE5C /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		202415E923DA3D5100BD13C2 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
-		202BCD8C23D63AD2008BB6A7 /* 3Smile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3Smile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		202BCD8C23D63AD2008BB6A7 /* Dont Smil3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dont Smil3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		202BCD8F23D63AD2008BB6A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		202BCD9123D63AD2008BB6A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		202BCD9623D63AD2008BB6A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,12 +75,13 @@
 		2093AEDA23DCCF3C005CA220 /* CameraPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermission.swift; sourceTree = "<group>"; };
 		20C3419223DD242A003377B5 /* ScoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		20CDF7FE23DFABEA0000748C /* YoutubeVideoQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoQuality.swift; sourceTree = "<group>"; };
+		20CDF80023DFBB180000748C /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
+		20CDF80323DFBDFC0000748C /* PlayerCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCellView.swift; sourceTree = "<group>"; };
 		20E5D27523DF57CA00C7A982 /* CloudkitDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudkitDAO.swift; sourceTree = "<group>"; };
 		20EC1B3E23D904E900402785 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		20EC1B4023D9056800402785 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		20EC1B4223D9057900402785 /* PlayerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatus.swift; sourceTree = "<group>"; };
 		20EC1B4423D913BF00402785 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		20EC1B4623D9166700402785 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		20EC1B4A23D917AA00402785 /* SceneTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTableView.swift; sourceTree = "<group>"; };
 		20EC1B4C23D9EE2900402785 /* GameStartMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStartMenu.xib; sourceTree = "<group>"; };
 		20EC1B4F23D9FB5700402785 /* GameStartMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartMenu.swift; sourceTree = "<group>"; };
@@ -132,7 +136,7 @@
 		202BCD8D23D63AD2008BB6A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				202BCD8C23D63AD2008BB6A7 /* 3Smile.app */,
+				202BCD8C23D63AD2008BB6A7 /* Dont Smil3.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,12 +172,12 @@
 		2038828923D75F0A00C25FFD /* GameView */ = {
 			isa = PBXGroup;
 			children = (
+				20CDF80223DFBB2C0000748C /* PlayerCell */,
 				20EC1B4E23D9FB0100402785 /* CustomStartView */,
 				20EC1B4423D913BF00402785 /* GameViewController.swift */,
 				20EC1B4A23D917AA00402785 /* SceneTableView.swift */,
 				2038828723D75CD000C25FFD /* arSceneView.swift */,
 				2038828A23D75F2700C25FFD /* YoutubePlayer.swift */,
-				20EC1B4623D9166700402785 /* PlayerTableViewCell.swift */,
 				20E5D27523DF57CA00C7A982 /* CloudkitDAO.swift */,
 			);
 			path = GameView;
@@ -207,8 +211,18 @@
 				208D920D23DC029200E3733A /* Screenshot.swift */,
 				208D920F23DC097300E3733A /* Haptic.swift */,
 				2093AEDA23DCCF3C005CA220 /* CameraPermission.swift */,
+				2021520223E09BA900AFFE5C /* Shadow.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		20CDF80223DFBB2C0000748C /* PlayerCell */ = {
+			isa = PBXGroup;
+			children = (
+				20CDF80023DFBB180000748C /* PlayerCell.xib */,
+				20CDF80323DFBDFC0000748C /* PlayerCellView.swift */,
+			);
+			path = PlayerCell;
 			sourceTree = "<group>";
 		};
 		20EC1B3D23D904DD00402785 /* Models */ = {
@@ -262,7 +276,7 @@
 			);
 			name = TikTokLaugh;
 			productName = TikTokLaugh;
-			productReference = 202BCD8C23D63AD2008BB6A7 /* 3Smile.app */;
+			productReference = 202BCD8C23D63AD2008BB6A7 /* Dont Smil3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -306,6 +320,7 @@
 				2050B90423DA479E00313D9F /* VideoTexturedFace.shader in Resources */,
 				20EC1B4D23D9EE2A00402785 /* GameStartMenu.xib in Resources */,
 				2050B90E23DA4F2600313D9F /* ship.scn in Resources */,
+				20CDF80123DFBB180000748C /* PlayerCell.xib in Resources */,
 				202BCD9C23D63AD6008BB6A7 /* LaunchScreen.storyboard in Resources */,
 				202BCD9923D63AD6008BB6A7 /* Assets.xcassets in Resources */,
 				202BCD9723D63AD2008BB6A7 /* Main.storyboard in Resources */,
@@ -366,8 +381,10 @@
 				20EC1B5023D9FB5700402785 /* GameStartMenu.swift in Sources */,
 				20FCA31023DA20FC00302D2A /* VideoPlayerState.swift in Sources */,
 				20EC1B4523D913BF00402785 /* GameViewController.swift in Sources */,
+				2021520323E09BA900AFFE5C /* Shadow.swift in Sources */,
 				208D921023DC097300E3733A /* Haptic.swift in Sources */,
 				208D920E23DC029200E3733A /* Screenshot.swift in Sources */,
+				20CDF80423DFBDFC0000748C /* PlayerCellView.swift in Sources */,
 				2050B90A23DA47B700313D9F /* ARFrame+TransformedDepthImage.swift in Sources */,
 				202BCD9023D63AD2008BB6A7 /* AppDelegate.swift in Sources */,
 				2038828B23D75F2700C25FFD /* YoutubePlayer.swift in Sources */,
@@ -380,7 +397,6 @@
 				2050B90B23DA47B700313D9F /* SCNMatrix4+affineTransform.swift in Sources */,
 				2050B91523DA7A8400313D9F /* Colors.swift in Sources */,
 				20EC1B5223D9FDF700402785 /* GameMode.swift in Sources */,
-				20EC1B4723D9166700402785 /* PlayerTableViewCell.swift in Sources */,
 				20EC1B4323D9057900402785 /* PlayerStatus.swift in Sources */,
 				202415EA23DA3D5100BD13C2 /* EndGameViewController.swift in Sources */,
 				2038828823D75CD000C25FFD /* arSceneView.swift in Sources */,
@@ -539,8 +555,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = continepedro.laughwithfriends;
-				PRODUCT_NAME = 3Smile;
+				PRODUCT_NAME = "Dont Smil3";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -559,8 +576,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = continepedro.laughwithfriends;
-				PRODUCT_NAME = 3Smile;
+				PRODUCT_NAME = "Dont Smil3";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

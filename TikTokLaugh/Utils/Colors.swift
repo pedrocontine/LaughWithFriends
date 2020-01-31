@@ -11,9 +11,9 @@ import UIKit
 
 extension UIColor {
     struct Custom {
-        static var red = UIColor(displayP3Red: 206/255, green: 70/255, blue: 70/255, alpha: 1)
-        static var blue = UIColor(displayP3Red: 70/255, green: 138/255, blue: 206/255, alpha: 1)
-        static var green = UIColor(displayP3Red: 69/255, green: 208/255, blue: 138/255, alpha: 1)
+        static var gold = UIColor(displayP3Red: 225/255, green: 173/255, blue: 61/255, alpha: 1)
+        static var silver = UIColor(displayP3Red: 180/255, green: 180/255, blue: 180/255, alpha: 1)
+        static var bronze = UIColor(displayP3Red: 209/255, green: 128/255, blue: 91/255, alpha: 1)
     }
 }
 

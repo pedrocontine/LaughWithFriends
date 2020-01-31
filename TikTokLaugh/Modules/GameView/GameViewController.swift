@@ -27,6 +27,8 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     var interstitial: GADInterstitial!
     var gameController: GameController!
     var screenshot: UIImage?
+    var deltaTime = TimeInterval()
+    var lastUpdateTime = TimeInterval()
     
     var videosCount : Int = 5
     let moviePlayer = AVPlayerViewController()
@@ -167,6 +169,13 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     func verifyFaceTrackingAvailability() {
         guard ARFaceTrackingConfiguration.isSupported
             else {fatalError("Device does not support face tracking")}
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let nib = UINib.init(nibName: "PlayerCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "cell2")
     }
     
     override func viewWillAppear(_ animated: Bool) {
