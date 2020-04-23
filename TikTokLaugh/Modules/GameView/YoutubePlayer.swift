@@ -20,7 +20,16 @@ extension GameViewController: WKYTPlayerViewDelegate {
     }
     
     func loadVideos() {
-        CloudkitDAO().getUnseenMovies { (movies) in
+        let dao = CloudkitDAO()
+        dao.errorCompletion = { error in
+            let alertController = UIAlertController(title: "CARAIA!", message: error.localizedDescription, preferredStyle: .alert)
+             
+             let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+             alertController.addAction(cancelAction)
+             
+            self.present(alertController, animated: true, completion: nil)
+        }
+        dao.getUnseenMovies { (movies) in
             if movies.count >= self.videosCount {
                 self.loadPlaylist(playlist: movies)
             }
@@ -30,6 +39,15 @@ extension GameViewController: WKYTPlayerViewDelegate {
                 }
             }
         }
+    }
+    
+    func showError(_ error: Error) {
+        let alertController = UIAlertController(title: "CARAIA!", message: error.localizedDescription, preferredStyle: .alert)
+         
+         let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+         alertController.addAction(cancelAction)
+         
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func loadPlaylist(playlist: [String]) {

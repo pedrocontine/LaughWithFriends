@@ -15,6 +15,8 @@ class CloudkitDAO {
     let privateDB = CKContainer.default().privateCloudDatabase
     var recordID: CKRecord.ID?
     
+    var errorCompletion: ((_ error: Error) -> Void)?
+    
     func getRecords(db: CKDatabase, recordType: String, completion: @escaping (_ records: [CKRecord]?) -> Void) {
         
         let predicate = NSPredicate(value: true)
@@ -23,8 +25,9 @@ class CloudkitDAO {
         let zone = CKRecordZone.default().zoneID
         
         db.perform(query, inZoneWith: zone) { (records, error) in
-            if error != nil {
-               completion(nil)
+            if let error = error {
+                self.errorCompletion?(error)
+                return
             }
             else {
                completion(records)

@@ -91,8 +91,8 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     }
     
     func initInterstitial() {
-        //interstitial = GADInterstitial(adUnitID: "ca-app-pub-4893647003110985/7489510343")
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-4893647003110985/7489510343")
+        //interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         interstitial.delegate = self
         let request = GADRequest()
         interstitial.load(request)
@@ -161,8 +161,10 @@ class GameViewController: UIViewController, GameControllerDelegate, GameStartMen
     }
     
     func verifyFaceTrackingAvailability() {
-        guard ARFaceTrackingConfiguration.isSupported
-            else {fatalError("Device does not support face tracking")}
+        guard ARFaceTrackingConfiguration.isSupported else {
+            print("Device does not support face tracking")
+            return
+        }
     }
     
     override func viewDidLoad() {
